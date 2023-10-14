@@ -20,7 +20,6 @@ use App\Http\Controllers\ListingController;
 //All listings
 Route::get('/', [ListingController::class, 'index']);
 
-
 //show create form
 Route::get('/listings/create', [ListingController::class, 'create']);
 
