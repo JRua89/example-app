@@ -47,8 +47,11 @@ Route::post('/users', [UserController::class, 'store']);
 // Log user out
 Route::post('/logout', [UserController::class, 'logout']);
 
+//Show Login form
+Route::get('/login', [UserController::class, 'login']);
 
-
+//Login User
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::get('/hello', function () {
     return response('hello world', 200)->header('Content-Type', 'text/plain');
